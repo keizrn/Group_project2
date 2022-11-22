@@ -1,4 +1,3 @@
 import controller as c
 
-if __name__ == '__main__':
-    c.start()
+c.push_the_button()

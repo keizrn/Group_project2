@@ -1,24 +1,31 @@
-from tabulate import tabulate
+def correct_name(text):
+    name = input(f'{text} ')
+    while True:
+        if name.isalpha():
+            return name.capitalize()
+        print('не корректный ввод')
+        name = input(f'{text} ')
 
 
-errors_1 = {0: '\n',
-            1: 'Ошибка выбора меню\n'}
+def correct_number():
+    number = input('Введите номер телефона +7 код номер без пробелов -> ')
+    while True:
+        if number[0] == '+' and number[1:].isdigit() and len(number) == 12:
+            return number
+        print('не корректный ввод')
+        number = input('Введите номер телефона +7 код номер без пробелов -> ')
 
-def view_menu():
-    print("Выберите пункт меню:\n"
-          "1 - Посмотреть таблицу\n"
-          "2 - Добавить запись\n"
-          "3 - Удалить запись\n"
-          "4 - Редактировать запись\n"
-          "5 - Выход\n\n->  ")
-
-
-def browse_book(book_0: list) -> None:
-    for contact in book_0:
-        contact[-1] = contact[-1].replace(';', '\n')
-    headers = ['id', 'Имя', 'Фамилия', 'Дата рождения', 'Место работы', 'Телефоны']
-    print(tabulate(book_0, headers=headers, tablefmt='fancy_grid'))
-
-
-def print_line(code_error):
-    print(errors_1[code_error])
+def get_choice():
+    flag = False
+    while not flag:
+        try:
+            number = int(input('Выберите действие:\n'
+                     'Ввод данных - 1\n'
+                     'Изменение данных - 2\n'
+                     'Поиск по ID - 3\n'
+                     'Выход из программы  4: '))
+            if 0 < number < 5:
+                flag = True
+        except ValueError:
+            print("Ошибка, попробуйте еще раз!")
+    return number
