@@ -16,5 +16,3 @@ def write_data():
         # csv_writer.writeheader()
         csv_writer.writerow({'last_name': surname,
         'first_name': name, 'second_name': sec_name, 'phone': phone})
-        # csv_writer.writerow({'id': i, 'last_name': surname,
-        # 'first_name': name, 'second_name': sec_name, 'phone': phone})
