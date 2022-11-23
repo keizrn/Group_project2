@@ -45,7 +45,7 @@ def write_data():
             # csv_writer.writerow({'id': max_id+1, 'last_name': surname,
             #                     'first_name': name, 'second_name': sec_name, 'phone': phone})
 
-        csv_writer.writerow({'id': max_id+1, 'last_name': surname,
+            csv_writer.writerow({'id': max_id+1, 'last_name': surname,
                             'first_name': name, 'second_name': sec_name, 'phone': phone})
 
     columns = [max_id+1, name, surname, sec_name, phone]
