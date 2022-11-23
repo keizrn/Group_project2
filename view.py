@@ -10,7 +10,7 @@ def correct_name(text):
 def correct_number():
     number = input('Введите номер телефона +7 код номер без пробелов -> ')
     while True:
-        if number[0] == '+' and number[1:8].isdigit(): # and len(number) == 12:
+        if number[0] == '+' and number[1:].isdigit() : #and len(number) == 12:
             return number
         print('не корректный ввод')
         number = input('Введите номер телефона +7 код номер без пробелов -> ')
@@ -29,3 +29,5 @@ def get_choice():
         except ValueError:
             print("Ошибка, попробуйте еще раз!")
     return number
+
+column_names = ['ID', 'name', 'surname', 'phones', 'e_mails']
