@@ -3,8 +3,7 @@ import csv
 
 def data_changes():
     with open('data.csv', 'r', encoding='utf-8', newline='') as csvfile3:
-        fieldname_3 = ['id', 'first_name', 'second_name', 'last_name', 'phone']
-        csv_reader_3 = csv.DictReader(csvfile3)
+        csv_reader_3 = csv.reader(csvfile3)
         rows = list(csv_reader_3)
 
     print('Выбор параметра для поиска контакта.')
@@ -28,8 +27,7 @@ def data_changes():
             isFound = False
     
     with open('data.csv', 'w', encoding='utf-8', newline='') as csvfile3:
-        fieldname_3 = ['id', 'first_name', 'second_name', 'last_name', 'phone']
-        csv_writer = csv.DictWriter(csvfile3, fieldnames=fieldname_3)
+        csv_writer = csv.writer(csvfile3, delimiter=',')
         csv_writer.writerow(rows)
     if isFound:
         return ('Изменения внесены.')
