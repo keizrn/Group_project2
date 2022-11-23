@@ -25,7 +25,7 @@ def write_data():
                                 'first_name': name, 'second_name': sec_name, 'phone': phone})
             
     else:
-        with open('data2.csv', 'w', encoding='utf-8', newline='') as csvfile3:
+        with open('data.csv', 'w', encoding='utf-8', newline='') as csvfile3:
             fieldnames_3 = ['id', 'first_name', 'second_name', 'last_name', 'phone']
             csv_writer = csv.DictWriter(csvfile3, fieldnames=fieldnames_3)
             csv_writer.writeheader()
