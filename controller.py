@@ -37,8 +37,10 @@ def push_the_button():
         elif info == 5:
             list_search3 = ms.search_data()
             print(list_search3)
-            md.delete_confirm(list_search3)
-            lg.write_log(info, login, list_search3, func = 5)
+            if md.delete_confirm(list_search3) is True:
+                lg.write_log(info, login, list_search3, func =5)
+            else:
+                lg.write_log(info, login, list_search3, func =6)
         elif info == 6:
             contact = 'None'
             lg.write_log(info, login, contact, func)
