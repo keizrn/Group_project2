@@ -55,14 +55,27 @@ def data_change(id_number):
                     contact = f'Измени в записи id {id_number}: c {list_change_2[choice_id]} на {str_temp}'
                     return contact, choice_id
             elif choice_id == 2:
-                str_temp = input('Вы собираетесь изменить фамилию. Введите новую фамилию.. -> ')
-                if input(f'Подтвердите перезапись фамилии в записи {id_number}: c {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
+                str_temp = input('Вы собираетесь изменить отчество. Введите новое отчество.. -> ')
+                if input(f'Подтвердите перезапись отчества в записи {id_number}: c {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                     record_change(id_number, str_temp, choice_id)
                     contact = f'Измени в записи id {id_number}: c {list_change_2[choice_id]} на {str_temp}'
                     return contact, choice_id
+            elif choice_id == 3:
+                str_temp = input('Вы собираетесь изменить фамилию. Введите новую фамилию.. -> ')
+                if input (f'Подтвердите перезапись фамилии в записи {id_number}: с {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
+                    record_change(id_number, str_temp, choice_id)
+                    contact = f'Измени в записи id {id_number}: с {list_change_2[choice_id]} на {str_temp}'
+                    return contact, choice_id
+            elif choice_id == 4:
+                str_temp = input('Вы собираетесь изменить номер телефона. Введите номер телефона +7 код номер без пробелов ->')
+                if input (f'Подтвердите перезапись номер телефона в записи {id_number}: с {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']: 
+                    record_change(id_number, str_temp, choice_id)
+                    contact = f'Измени в записи id {id_number}: с {list_change_2[choice_id]} на {str_temp}'
+                    return contact, choice_id
+                else:
+                    return f'Номер введен не верно'
         except ValueError:
             print('Введено не число')
-
 
 def record_change(id_n, string_1, header_1):
     with open('data.csv', 'r', encoding='utf-8') as csvfile_6:
