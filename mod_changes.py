@@ -49,7 +49,7 @@ def data_change(id_number):
         for i_3 in range(1, len(list_change_2)):
             print(f'{header_change[i_3]} - {list_change_2[i_3]} - {i_3}')
         try:
-            choice_id = int(input('\nУкажите цифру ->  '))
+            choice_id = int(input('\nУкажите цифру ->  ').isalnum)
 
             if choice_id == 1:
                 str_temp = input('Вы собираетесь изменить имя. Введите новое имя.. -> ')
