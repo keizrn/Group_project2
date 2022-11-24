@@ -5,7 +5,7 @@ mode = {0: 'None', 1: 'Имя', 2: 'Фамилия', 3: 'Отчество', 4: '
 act = {1: 'Ввод данных', 2: 'Просмотр базы', 3: 'Поиск', 4: 'Внесение изменений', 5: 'Удаление записи', 6: 'Выход из программы'}
 
 
-def correct_name(text):
+def correct_name(text):  # Проверка на ввод имени/фамилии
     name = input(f'{text} ')
     while True:
         if name.isalpha():
@@ -14,7 +14,7 @@ def correct_name(text):
         name = input(f'{text} ')
 
 
-def any_name(text):
+def any_name(text):  # Проверка на ввод отчества
     name_2 = input(f'{text} ')
     while True:
         if name_2.isalpha() or name_2 == '-':
@@ -22,19 +22,17 @@ def any_name(text):
         print('не корректный ввод')
         name_2 = input(f'{text} ')
 
-def correct_number():
+def correct_number():  # проверка на ввод номера телефона
     number = input('Введите номер телефона +7 код номер без пробелов -> ')
     while True:
-        if number[0] == '+' and number[1:].isdigit() : #and len(number) == 12:
-        # if number[0] == number[1:6].isdigit():
+        if number[0] == '+' and number[1:].isdigit():
             return number
         print('не корректный ввод')
         number = input('Введите номер телефона +7 код номер без пробелов -> ')
 
 
-def get_choice():
-    flag = False
-    while not flag:
+def get_choice():  # основное меню
+    while True:
         try:
             number = int(input('\nВыберите действие:\n'
                                'Ввод данных - 1\n'
@@ -44,16 +42,16 @@ def get_choice():
                                'Удаление записи - 5\n'
                                'Выход из программы - 6: '))
             if 0 < number < 7:
-                flag = True
+                break
         except ValueError:
-            print("Ошибка, попробуйте еще раз!")
+            print("Введено не число")
     return number
 
 
-def input_search_query():
+def input_search_query():  # ввод значения для поиска
     return input('Введите значение для поиска.. ->  ').title()
 
 
-def show_book(book_1: list):
+def show_book(book_1: list):  # вывод таблицы
     headers_1 = book_1.pop(0)
     print(tabulate(book_1, headers=headers_1, tablefmt='fancy_grid'))
