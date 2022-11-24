@@ -4,8 +4,8 @@ import view as v
 import mod_search
 
 
-def change_confirm(list_s):  # выбор записи для внесения изменений
-    with open('data.csv', 'r', encoding='utf-8') as csvfile_4:
+def change_confirm(file_name3, list_s):  # выбор записи для внесения изменений
+    with open(f'{file_name3}.csv', 'r', encoding='utf-8') as csvfile_4:
         reader_choice = csv.reader(csvfile_4)
         list_choice = list(reader_choice)
         id_choice = [d[0] for d in list_choice]  # полный список всех айди из базы
@@ -29,13 +29,13 @@ def change_confirm(list_s):  # выбор записи для внесения �
             id_num = list_s[0][0]
 
         if input('\nПодтвердите, что выбрана правильная запись. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
-            return data_change(id_num)
+            return data_change(file_name3, id_num)
         else:
             return None, 0
 
 
-def data_change(id_number):  # выбор поля для внесения изменений
-    with open('data.csv', 'r', encoding='utf-8') as csvfile_6:
+def data_change(file_name4, id_number):  # выбор поля для внесения изменений
+    with open(f'{file_name4}.csv', 'r', encoding='utf-8') as csvfile_6:
         dict_change = csv.DictReader(csvfile_6)
         header_change = dict_change.fieldnames
 
@@ -63,7 +63,7 @@ def data_change(id_number):  # выбор поля для внесения из�
                     print('Неправильный пункт меню')  # ошибка - неправильный пункт меню
                     continue
                 if input(f'Подтвердите перезапись в строке {id_number}: с {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
-                    record_change(id_number, str_temp, choice_id)
+                    record_change(file_name4, id_number, str_temp, choice_id)
                     contact = f'Изменения в записи id {id_number}: с {list_change_2[choice_id]} на {str_temp}'
                     return contact, choice_id
 
@@ -72,11 +72,11 @@ def data_change(id_number):  # выбор поля для внесения из�
                 continue
 
 
-def record_change(id_n, string_1, header_1):  # внесение изменений
-    with open('data.csv', 'r', encoding='utf-8') as csvfile_6:
+def record_change(file_name5, id_n, string_1, header_1):  # внесение изменений
+    with open(f'{file_name5}.csv', 'r', encoding='utf-8') as csvfile_6:
         reader_record = csv.reader(csvfile_6.readlines())
 
-    with open('data.csv', 'w', encoding='utf-8', newline='') as csvfile_7:
+    with open(f'{file_name5}.csv', 'w', encoding='utf-8', newline='') as csvfile_7:
         writer_record = csv.writer(csvfile_7)
         for line_6 in reader_record:
             if line_6[0] == str(id_n):  # если это нужная нам строка

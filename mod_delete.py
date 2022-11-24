@@ -2,8 +2,8 @@ import csv
 import view as v
 
 
-def delete_confirm(list_d):
-    with open('data.csv', 'r', encoding='utf-8') as csvfile_4:
+def delete_confirm(file_name7, list_d):
+    with open(f'{file_name7}.csv', 'r', encoding='utf-8') as csvfile_4:
         reader_choice = csv.reader(csvfile_4)
         list_choice = list(reader_choice)
         id_choice = [d[0] for d in list_choice]
@@ -25,15 +25,15 @@ def delete_confirm(list_d):
             id_num = list_d[0][0]
 
         if input('\nПодтвердите, что выбрана правильная запись для удаления. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
-            data_delete(id_num)
+            data_delete(file_name7, id_num)
 
 
-def data_delete(id_number):
-    with open('data.csv', 'r', encoding='utf-8') as csvfile_6:
+def data_delete(file_name8, id_number):
+    with open(f'{file_name8}.csv', 'r', encoding='utf-8') as csvfile_6:
         reader_delete = csv.reader(csvfile_6.readlines())
         clean_rows = [row3 for row3 in reader_delete if row3[0] != str(id_number)]  # генератор всех строк, кроме той, которую указали
 
-    with open('data.csv', 'w', encoding='utf-8', newline='') as csvfile_7:
+    with open(f'{file_name8}.csv', 'w', encoding='utf-8', newline='') as csvfile_7:
         writer_record = csv.writer(csvfile_7)
         writer_record.writerows(clean_rows)
     print('\nЗапись удалена')

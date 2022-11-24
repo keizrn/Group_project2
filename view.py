@@ -55,3 +55,7 @@ def input_search_query():  # ввод значения для поиска
 def show_book(book_1: list):  # вывод таблицы
     headers_1 = book_1.pop(0)
     print(tabulate(book_1, headers=headers_1, tablefmt='fancy_grid'))
+
+def choice_file_input():
+    return input('- Введите название файла или путь к файлу с данными\n'
+                 '- Или нажмите "Enter" для файла по умолчанию (data.csv).\n')
