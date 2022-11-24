@@ -24,10 +24,10 @@ def push_the_button():
 
             list_search = ms.search_data()
             print(list_search)
-            if list_search and input('Внести изменения? (д, y)').lower() in ['д', 'y', 'да', 'yes']:
-                mc.change_confirm(list_search)
-
-                lg.write_log(info, login, list_search, func)
+            lg.write_log(info, login, list_search, func)
+            if list_search and input('Внести изменения? (y/n)').lower() in ['д', 'y', 'да', 'yes']:
+                contact, func =  mc.change_confirm(list_search)
+                lg.write_log(info, login, contact, func)
 
         elif info == 4:
             list_search2 = ms.search_data()

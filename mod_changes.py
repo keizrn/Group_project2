@@ -25,8 +25,8 @@ def change_confirm(list_s):
         for row_2 in list_choice:
             if row_2[0] == str(id_num):
                 print(row_2)
-        if input('Подтвердите, что выбрана правильная запись. (д, y)').lower() in ['д', 'y', 'да', 'yes']:
-            data_change(id_num)
+        if input('Подтвердите, что выбрана правильная запись. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
+            return data_change(id_num)
         else:
             return
 
@@ -50,14 +50,16 @@ def data_change(id_number):
 
             if choice_id == 1:
                 str_temp = input('Вы собираетесь изменить имя. Введите новое имя.. -> ')
-                if input(f'Подтвердите перезапись имени в записи {id_number}: c {list_change_2[choice_id]} на {str_temp}. (д, y)').lower() in ['д', 'y', 'да', 'yes']:
+                if input(f'Подтвердите перезапись имени в записи {id_number}: c {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                     record_change(id_number, str_temp, choice_id)
-
+                    contact = f'Измени в записи id {id_number}: c {list_change_2[choice_id]} на {str_temp}'
+                    return contact, choice_id
             elif choice_id == 2:
                 str_temp = input('Вы собираетесь изменить фамилию. Введите новую фамилию.. -> ')
-                if input(f'Подтвердите перезапись фамилии в записи {id_number}: c {list_change_2[choice_id]} на {str_temp}. (д, y)').lower() in ['д', 'y', 'да', 'yes']:
+                if input(f'Подтвердите перезапись фамилии в записи {id_number}: c {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                     record_change(id_number, str_temp, choice_id)
-
+                    contact = f'Измени в записи id {id_number}: c {list_change_2[choice_id]} на {str_temp}'
+                    return contact, choice_id
         except ValueError:
             print('Введено не число')
 
