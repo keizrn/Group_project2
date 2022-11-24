@@ -3,8 +3,8 @@ import csv
 import os.path
 
 def write_data():
-    name = v.correct_name('Введите Имя : ')
-    sec_name = v.correct_name('Введите Отчество (если нет отчества "-"): ')
+    name = v.correct_name('\nВведите Имя : ')
+    sec_name = v.any_name('Введите Отчество (если нет отчества "-"): ')
     surname = v.correct_name('Введите Фамилию : ')
     phone = v.correct_number()
 
@@ -35,6 +35,9 @@ def write_data():
                                 'first_name': name, 'second_name': sec_name, 'phone': phone})
 
     columns = [max_id+1, name, surname, sec_name, phone]
+    fieldnames_4 = ['id', 'first_name', 'second_name', 'last_name', 'phone']
+    print('\nНовый контакт добавлен в базу:')
+    v.show_book([fieldnames_4, columns])
     contact = {}
     for i in range(len(columns)):
         contact[v.column_names[i]] = columns[i] if columns[i] else '-'

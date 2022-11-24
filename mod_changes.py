@@ -1,11 +1,12 @@
 import csv
 
+import view as v
 import mod_search
 
 
 def change_confirm(list_s):
-    if list_s == None:
-        return
+    if list_s is None:
+        return None, 0
     else: 
         with open('data.csv', 'r', encoding='utf-8') as csvfile_4:
             reader_choice = csv.reader(csvfile_4)
@@ -27,7 +28,7 @@ def change_confirm(list_s):
 
             for row_2 in list_choice:
                 if row_2[0] == str(id_num):
-                    print(row_2)
+                    v.show_book([list_choice[0], row_2])
             if input('\nПодтвердите, что выбрана правильная запись. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                 return data_change(id_num)
             else:
@@ -44,7 +45,6 @@ def data_change(id_number):
         for row_3 in list_change:
             if row_3[0] == str(id_number):
                 list_change_2 = row_3
-        print(list_change_2)
         while True:
             print('\nВыберите запись, которую вы хотите изменить:')
             for i_3 in range(1, len(list_change_2)):
@@ -63,9 +63,9 @@ def data_change(id_number):
                 else:
                     print('Неправильный пункт меню')
                     continue
-                if input(f'Подтвердите перезапись номер телефона в записи {id_number}: с {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
+                if input(f'Подтвердите перезапись в строке {id_number}: с {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                     record_change(id_number, str_temp, choice_id)
-                    contact = f'Измени в записи id {id_number}: с {list_change_2[choice_id]} на {str_temp}'
+                    contact = f'Изменения в записи id {id_number}: с {list_change_2[choice_id]} на {str_temp}'
                     return contact, choice_id
 
             except ValueError:

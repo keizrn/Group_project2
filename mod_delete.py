@@ -1,5 +1,5 @@
 import csv
-
+import view as v
 
 def delete_confirm(list_d):
     if list_d is None:
@@ -24,7 +24,7 @@ def delete_confirm(list_d):
 
             for row_2 in list_choice:
                 if row_2[0] == str(id_num):
-                    print(row_2)
+                    v.show_book([list_choice[0], row_2])
             if input('\nПодтвердите, что выбрана правильная запись для удаления. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                 return data_delete(id_num)
             else:
@@ -39,4 +39,5 @@ def data_delete(id_number):
     with open('data.csv', 'w', encoding='utf-8', newline='') as csvfile_7:
         writer_record = csv.writer(csvfile_7)
         writer_record.writerows(clean_rows)
+    print('\nЗапись удалена')
     return True
