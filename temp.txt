@@ -1,0 +1,5 @@
+id,first_name,second_name,last_name,phone
+1,Komar,Alex,Komarov,+7945615
+2,Komar,Kuku,Komaridze,+77651521
+3,Komar,Tya,Komaryan,+748561561
+4,Oleg,Aaaa,Tinkoff,+7516515
