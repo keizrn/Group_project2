@@ -17,7 +17,7 @@ def push_the_button():
             print(contact)
             lg.write_log(info, login, contact, func)
         elif info == 2:
-            contact = mb.main_browse()
+            contact = 'ALL BD'
             print(mb.main_browse())
             lg.write_log(info, login, contact, func)
         elif info == 3:
