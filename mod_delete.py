@@ -2,30 +2,33 @@ import csv
 
 
 def delete_confirm(list_d):
-    with open('data.csv', 'r', encoding='utf-8') as csvfile_4:
-        reader_choice = csv.reader(csvfile_4)
-        list_choice = list(reader_choice)
-        id_choice = [d[0] for d in list_choice]
-        if len(list_d) > 1:
-            input_id = True
-            while input_id:
-                try:
-                    id_num = int(input('Введите id записи, которую вы хотите изменить.. -> '))
-                    input_id = False
-                except ValueError:
-                    print('Введено не число')   
-            if str(id_num) not in id_choice:
-                print('Такого индекса нет в базе')
-        else:
-            id_num = list_d[0][0]
+    if list_d == None:
+        return
+    else:        
+        with open('data.csv', 'r', encoding='utf-8') as csvfile_4:
+            reader_choice = csv.reader(csvfile_4)
+            list_choice = list(reader_choice)
+            id_choice = [d[0] for d in list_choice]
+            if len(list_d) > 1:
+                input_id = True
+                while input_id:
+                    try:
+                        id_num = int(input('Введите id записи, которую вы хотите изменить.. -> '))
+                        input_id = False
+                    except ValueError:
+                        print('Введено не число')   
+                if str(id_num) not in id_choice:
+                    print('Такого индекса нет в базе')
+            else:
+                id_num = list_d[0][0]
 
-        for row_2 in list_choice:
-            if row_2[0] == str(id_num):
-                print(row_2)
-        if input('\nПодтвердите, что выбрана правильная запись для удаления. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
-            return data_delete(id_num)
-        else:
-            return
+            for row_2 in list_choice:
+                if row_2[0] == str(id_num):
+                    print(row_2)
+            if input('\nПодтвердите, что выбрана правильная запись для удаления. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
+                return data_delete(id_num)
+            else:
+                return
 
 
 def data_delete(id_number):
