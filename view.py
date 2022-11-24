@@ -22,7 +22,7 @@ def get_choice():
             number = int(input('Выберите действие:\n'
                      'Ввод данных - 1\n'
                      'Изменение данных - 2\n'
-                     'Поиск по ID - 3\n'
+                     'Поиск - 3\n'
                      'Выход из программы  4: '))
             if 0 < number < 5:
                 flag = True
@@ -30,4 +30,6 @@ def get_choice():
             print("Ошибка, попробуйте еще раз!")
     return number
 
-column_names = ['ID', 'name', 'surname', 'phones', 'e_mails']
+column_names = ['ID', 'name', 'surname', 'sec_name', 'phones']
+mode = {0: 'none', 1: 'Фамилия', 2: 'Имя', 3: 'Отчество', 4: 'Телефон'}
+info = {1: 'Ввод данных', 2: 'Изменение данных', 3: 'Поиск', 4: 'Выход из программы'}
