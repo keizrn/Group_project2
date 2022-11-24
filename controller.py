@@ -14,7 +14,7 @@ def push_the_button():
         func = 0
         if info == 1:
             contact = ma.write_data()
-            print(contact)
+            print(f'\nДобавлена новая запись\n{contact}\n')
             lg.write_log(info, login, contact, func)
         elif info == 2:
             contact = 'ALL BD'
@@ -25,7 +25,7 @@ def push_the_button():
             print(list_search)
             lg.write_log(info, login, list_search, func)
             if list_search and input('Внести изменения? (y/n)').lower() in ['д', 'y', 'да', 'yes']:
-                contact, func =  mc.change_confirm(list_search)
+                contact, func = mc.change_confirm(list_search)
                 lg.write_log(info, login, contact, func)
         elif info == 4:
             list_search2 = ms.search_data()

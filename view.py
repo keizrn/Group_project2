@@ -10,7 +10,8 @@ def correct_name(text):
 def correct_number():
     number = input('Введите номер телефона +7 код номер без пробелов -> ')
     while True:
-        if number[0] == '+' and number[1:].isdigit() : #and len(number) == 12:
+        # if number[0] == '+' and number[1:].isdigit() : #and len(number) == 12:
+        if number[0] == number[1:6].isdigit():
             return number
         print('не корректный ввод')
         number = input('Введите номер телефона +7 код номер без пробелов -> ')
@@ -19,7 +20,7 @@ def get_choice():
     flag = False
     while not flag:
         try:
-            number = int(input('Выберите действие:\n'
+            number = int(input('\nВыберите действие:\n'
                                'Ввод данных - 1\n'
                                'Просмотр базы данных - 2\n'
                                'Поиск по базе - 3\n'

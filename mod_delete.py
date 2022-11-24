@@ -2,7 +2,7 @@ import csv
 
 
 def delete_confirm(list_d):
-    if list_d == None:
+    if list_d is None:
         return
     else:        
         with open('data.csv', 'r', encoding='utf-8') as csvfile_4:
@@ -28,7 +28,7 @@ def delete_confirm(list_d):
             if input('\nПодтвердите, что выбрана правильная запись для удаления. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                 return data_delete(id_num)
             else:
-                return
+                return None, 0
 
 
 def data_delete(id_number):
