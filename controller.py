@@ -1,5 +1,5 @@
 import mod_add as ma
-# import mod_get_bd as mg
+import logger as lg
 import mod_browse as mb
 import mod_search as ms
 import mod_changes as mc
@@ -11,20 +11,28 @@ def push_the_button():
     while True:
         login = v.correct_name('Введите ваш Login : ')
         info = v.get_choice()
+        func = 0
         if info == 1:
-            print(ma.write_data())
+            contact = ma.write_data()
+            print(contact)
+            lg.write_log(info, login, contact, func)
         elif info == 2:
+            contact = mb.main_browse()
             print(mb.main_browse())
+            lg.write_log(info, login, contact, func)
         elif info == 3:
 
             list_search = ms.search_data()
             print(list_search)
             if list_search and input('Внести изменения? (д, y)').lower() in ['д', 'y', 'да', 'yes']:
                 mc.change_confirm(list_search)
+
+                lg.write_log(info, login, list_search, func)
+
         elif info == 4:
             list_search2 = ms.search_data()
             print(list_search2)
-            mc.change_confirm(list_searc2)
+            mc.change_confirm(list_search2)
         elif info == 5:
             list_search3 = ms.search_data()
             print(list_search3)

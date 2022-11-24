@@ -8,6 +8,7 @@ def main_browse():
             header_1 = dict_reader1.fieldnames
             reader_1 = csv.reader(csvfile_browse)
             contacts_1 = [row for row in reader_1 if reader_1.line_num > 0]
-            return header_1, contacts_1
+            contact = header_1 + contacts_1
+            return contact
     except FileNotFoundError:
         return []
