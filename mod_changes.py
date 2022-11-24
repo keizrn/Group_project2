@@ -72,8 +72,6 @@ def data_change(id_number):
                     record_change(id_number, str_temp, choice_id)
                     contact = f'Измени в записи id {id_number}: с {list_change_2[choice_id]} на {str_temp}'
                     return contact, choice_id
-                else:
-                    return f'Номер введен не верно'
         except ValueError:
             print('Введено не число')
 
