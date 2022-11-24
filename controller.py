@@ -8,8 +8,8 @@ import view as v
 
 
 def push_the_button():
+    login = v.correct_name('Введите ваш Login : ')
     while True:
-        login = v.correct_name('Введите ваш Login : ')
         info = v.get_choice()
         func = 0
         if info == 1:
@@ -32,12 +32,16 @@ def push_the_button():
         elif info == 4:
             list_search2 = ms.search_data()
             print(list_search2)
-            mc.change_confirm(list_search2)
+            contact, func = mc.change_confirm(list_search2)
+            lg.write_log(info, login, contact, func)
         elif info == 5:
             list_search3 = ms.search_data()
             print(list_search3)
             md.delete_confirm(list_search3)
+            lg.write_log(info, login, list_search3, func = 5)
         elif info == 6:
+            contact = 'None'
+            lg.write_log(info, login, contact, func)
             break
 
         else:
