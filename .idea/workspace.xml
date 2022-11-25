@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e086f5e-a81d-439b-88c1-5dd2eb47a485" name="Changes" comment="" />
+    <list default="true" id="c5f5b46d-0710-4479-993b-20bb49317eb3" name="Changes" comment="Comments. 24.11.22 23:10" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,26 +16,143 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2I20EAH5uWQ8pFcjiecGWPbcN7G" />
+  <component name="ProjectId" id="2HrQfApEaRpdSizqIUjUBCWReVe" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Practice/PyCharm/Group_project2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Practice\PyCharm\Group_project2" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Group_project2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4e086f5e-a81d-439b-88c1-5dd2eb47a485" name="Changes" comment="" />
-      <created>1669364257640</created>
+      <changelist id="c5f5b46d-0710-4479-993b-20bb49317eb3" name="Changes" comment="" />
+      <created>1669040823097</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669364257640</updated>
+      <updated>1669040823097</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial structure">
+      <created>1669042575490</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669042575490</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial structure">
+      <created>1669042614749</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669042614749</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial structure">
+      <created>1669067302576</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669067302576</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Find max id in mod_add. 22.11.22 15:20">
+      <created>1669119687953</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669119687953</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Mod Browse. 23.11.22 16:20">
+      <created>1669209575076</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669209575076</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Mod Search. 23.11.22 16:40">
+      <created>1669210929014</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669210929014</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Mod Search. 23.11.22 16:40">
+      <created>1669211105934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669211105934</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Mod Change, Mod Delete. 23.11.22 23:30">
+      <created>1669235540665</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669235540665</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Mod change update. 24.11.22 19:40">
+      <created>1669308380936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669308380936</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Table view done. 24.11.22 20:55">
+      <created>1669312544993</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669312544993</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Comments. 24.11.22 23:10">
+      <created>1669320655903</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669320655903</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -45,5 +165,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial structure" />
+    <MESSAGE value="Find max id in mod_add. 22.11.22 15:20" />
+    <MESSAGE value="Mod Browse. 23.11.22 16:20" />
+    <MESSAGE value="Mod Search. 23.11.22 16:40" />
+    <MESSAGE value="Mod Change, Mod Delete. 23.11.22 23:30" />
+    <MESSAGE value="Mod change update. 24.11.22 19:40" />
+    <MESSAGE value="Table view done. 24.11.22 20:55" />
+    <MESSAGE value="Comments. 24.11.22 23:10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments. 24.11.22 23:10" />
   </component>
 </project>

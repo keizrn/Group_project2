@@ -32,7 +32,7 @@ def any_name(text):  # Проверка на ввод отчества
 def correct_number():  # проверка на ввод номера телефона
     number = input('Введите номер телефона +7 код номер без пробелов -> ')
     while True:
-        if number[0] == '+' and number[1:].isdigit():
+        if len(number) > 1 and number[0] == '+' and number[1:].isdigit():
             return number
         text_err(1)
         number = input('Введите номер телефона +7 код номер без пробелов -> ')
