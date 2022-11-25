@@ -46,4 +46,3 @@ def create_file(file_name10):
         csv_writer = csv.DictWriter(csvfile3, fieldnames=fieldnames_3)
         csv_writer.writeheader()  # записать заголовки
     return
-

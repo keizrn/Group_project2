@@ -12,9 +12,9 @@ def delete_confirm(file_name7, list_d):
                 try:
                     id_num = int(input('Введите id записи, которую вы хотите удалить.. -> '))
                 except ValueError:
-                    print('Введено не число')
+                    v.text_err(2)
                 if str(id_num) not in id_choice:
-                    print('Такого индекса нет в базе')
+                    v.text_err(4)
                 else:
                     break
 

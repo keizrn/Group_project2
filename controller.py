@@ -54,7 +54,7 @@ def main_menu():
             break
 
         else:
-            print('Неправильный пункт меню')
+            v.text_err(3)
             continue
 
 

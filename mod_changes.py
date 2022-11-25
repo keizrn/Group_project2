@@ -15,9 +15,9 @@ def change_confirm(file_name3, list_s):  # выбор записи для вне
                 try:
                     id_num = int(input('Введите id записи, которую вы хотите изменить.. -> '))
                 except ValueError:
-                    print('Введено не число')  # Проверка, что введено число
+                    v.text_err(2)  # Проверка, что введено число
                 if str(id_num) not in id_choice:  # если такого индекса нет в базе
-                    print('Такого индекса нет в базе')
+                    v.text_err(4)
                 else:
                     break
 
@@ -60,7 +60,7 @@ def data_change(file_name4, id_number):  # выбор поля для внесе
                 elif choice_id == 4:
                     str_temp = input('Вы собираетесь изменить номер телефона. Введите номер телефона +7 код номер без пробелов ->')
                 else:
-                    print('Неправильный пункт меню')  # ошибка - неправильный пункт меню
+                    v.text_err(3)  # ошибка - неправильный пункт меню
                     continue
                 if input(f'Подтвердите перезапись в строке {id_number}: с {list_change_2[choice_id]} на {str_temp}. (y/n)').lower() in ['д', 'y', 'да', 'yes']:
                     record_change(file_name4, id_number, str_temp, choice_id)
@@ -68,7 +68,7 @@ def data_change(file_name4, id_number):  # выбор поля для внесе
                     return contact, choice_id
 
             except ValueError:
-                print('Введено не число')
+                v.text_err(2)
                 continue
 
 
