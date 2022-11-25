@@ -43,8 +43,11 @@
 
 ### Кто работал над проектом
 Наталья -  https://github.com/keizrn
+
 Максим -  https://github.com/Makcmay
+
 Дарья - https://github.com/12data12 
+
 Мария - https://github.com/MashaZagodnikova
 
 Благодарим за внимание к нашей работе.
