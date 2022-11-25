@@ -45,7 +45,7 @@ def data_change(file_name4, id_number):  # выбор поля для внесе
             if row_3[0] == str(id_number):
                 list_change_2 = row_3  # нужная запись
         while True:
-            print('\nВыберите запись, которую вы хотите изменить:')
+            v.text_err(6)  # Выберите запись, которую вы хотите изменить
             for i_3 in range(1, len(list_change_2)):  # выбор поля для внесения изменений
                 print(f'{header_change[i_3]} - {list_change_2[i_3]} - {i_3}')
             try:

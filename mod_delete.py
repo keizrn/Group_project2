@@ -36,4 +36,4 @@ def data_delete(file_name8, id_number):
     with open(f'{file_name8}.csv', 'w', encoding='utf-8', newline='') as csvfile_7:
         writer_record = csv.writer(csvfile_7)
         writer_record.writerows(clean_rows)
-    print('\nЗапись удалена')
+    v.text_err(7)  # запись удалена

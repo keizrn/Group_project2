@@ -35,7 +35,7 @@ def write_data(file_name1):
 
     contact_1 = [max_id + 1, name, sec_name, surname, phone]
     fieldnames_4 = ['id', 'first_name', 'second_name', 'last_name', 'phone']
-    print('\nНовый контакт добавлен в базу:')
+    v.text_err(5)  # Новый контакт добавлен в базу
     v.show_book([fieldnames_4, contact_1])
     return contact_1
 
